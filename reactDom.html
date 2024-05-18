@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script> 
+
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+
+        const divReact = React.createElement('div',
+            {
+                className:'post-item',
+            },
+            React.createElement('h2',{
+            title:'Học react tại F8',
+            },'Học React'),
+            React.createElement('p',null,
+            'Học React từ cơ bản đến nâng cao'
+            ));
+                // get root element
+            const root =document.getElementById('root');
+                // React-Dom render ui
+                ReactDOM.render(divReact,root)
+
+            const ulReact = React.createElement('ul',null,
+            React.createElement('li',null,'javascrip'),
+            React.createElement('li',null,'ruby'),
+            )
+            ReactDOM.render(ulReact,root);
+            //bài tập 1
+            const h1React = React.createElement('h1',{title:'hello',className:'heading'},'hello guys!');
+            ReactDOM.render(h1React,root)
+            //bài tập 2
+
+
+
+    </script>
+</body>
+</html>
