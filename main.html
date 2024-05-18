@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+</head>
+<body>
+    <script>
+        const h1Dom = document.createElement('h1');
+        h1Dom.title = 'hello';
+        h1Dom.className='heading';
+        h1Dom.innerText='hello guy';
+        document.body.appendChild(h1Dom);
+
+        const h1React = React.createElement('h1',{
+            title:'hello',
+            className:'heading',
+ 
+        },'hello guy');
+
+
+        const ulDom = document.createElement('ul');
+        ulDom.id = 'ulId'
+        ulDom.style='color:red;'
+        const liDom1 = document.createElement('li');
+            liDom1.innerText='javascrip';
+        const liDom2 = document.createElement('li');
+            liDom2.innerText='php';
+            ulDom.appendChild(liDom2);
+            ulDom.appendChild(liDom1);
+            console.log(ulDom);
+            //cách tạo element bằng DOM
+
+            document.body.appendChild(ulDom);
+            const ilReact2 = React.createElement('li',null,'php')
+            const ulReact = React.createElement('ul',{ 
+                id:'ulReactId',
+                style:'color:blue'},
+            React.createElement('li',{},'javasctip','ruby'),
+            ilReact2,
+     
+        );
+            console.log(ulReact);
+            //cách tạo element bằng React
+                const divReact = React.createElement('div',{
+                    className:'post-item',
+                },
+            React.createElement('h2',{
+                title:'Học react tại F8',
+            },'Học React'),
+            React.createElement('p',null,'Học React từ cơ bản đến nâng cao')
+            );
+            console.log(divReact);
+            // bài tập
+    </script>
+
+</body>
+</html>
